@@ -2,15 +2,15 @@
 
 rounter({
     '/home': function(args) {
-		
+        
     },
     '/detail/:id': function(args) {
-		alert(args.id)
+        alert(args.id)
     },
-	'/list/p:page': function(args){
-		// /list/p3
-		// agrs.page => 3
-	},
+    '/list/p:page': function(args){
+        // /list/p3
+        // agrs.page => 3
+    },
 });
 
 
