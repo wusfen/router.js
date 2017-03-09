@@ -2,7 +2,7 @@
 @github https://github.com/wusfen/router.js/
 @example
 
-rounter({
+router({
     '/home': function(args) {
         
     },
@@ -18,7 +18,7 @@ rounter({
 
 */
 (function(exports) {
-    function rounter(map) {
+    function router(map) {
         addEventListener('hashchange', (function() {
 
             var path = location.hash.replace(/^#(!)?/, ''); // #!/s|#/s => /s
@@ -44,5 +44,5 @@ rounter({
     }
 
     // export
-    exports.rounter = rounter;
+    exports.router = router;
 })(window);

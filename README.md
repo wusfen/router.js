@@ -8,7 +8,7 @@ url#/path
 ```
 ```javascript
 
-rounter({
+router({
     '/home': function(args) {
         
     },
