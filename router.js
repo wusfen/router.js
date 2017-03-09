@@ -1,4 +1,6 @@
-/*
+/**
+@github https://github.com/wusfen/router.js/
+@example
 
 rounter({
     '/home': function(args) {
