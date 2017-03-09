@@ -27,6 +27,7 @@ rounter({
                 var argsM = path.match(reg); // /detail/99 => ['..', 99]
                 var args = {}
                 if (argsM) { // match
+                    // console.log(path, rule, reg, argsM);
                     for (var i = 0; i < namesM.length; i++) {
                         var name = namesM[i].substr(1); // :id => id
                         args[name] = argsM[i + 1]; // ['..', 99] => 99

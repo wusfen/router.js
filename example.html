@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <a href="#">#</a>
+    <a href="#/">/</a>
+    <a href="#/home">home</a>
+    <a href="#/list">list</a>
+    <a href="#/list/p2">list/p2</a>
+    <a href="#/detail/3998">detail/3998</a>
+    <a href="#/file/path/to/a.js">/file/path/to/a.js</a>
+    <div id="info"></div>
+    <script src="router.js"></script>
+    <script>
+    rounter({
+        '': function() {
+            this['/home']();
+        },
+        '/home': function(args) {
+            info.innerHTML = 'home'
+        },
+        '/detail/:id': function(args) {
+            info.innerHTML = 'detail/' + args.id
+        },
+        '/list': function(args) {
+            this['/list/p:page']({
+                page: 1
+            });
+        },
+        '/list/p:page?': function(args) {
+            info.innerHTML = 'list/' + args.page
+        },
+        '/login/:username(/:password)': function(args) {
+            console.log(args.username, args.password)
+        },
+        '/file/*file': function(args) {
+        	// todo
+        }
+    });
+    </script>
+</body>
+
+</html>
