@@ -20,7 +20,6 @@ router({
 (function(exports) {
     function router(map) {
         addEventListener('hashchange', (function f() {
-
             var path = location.hash.replace(/^#(!)?/, ''); // #!/s|#/s => /s
             for (var rule in map) {
                 var args = []
@@ -36,7 +35,6 @@ router({
                     map[rule](args)
                 }
             }
-
             return f
         })());
     }
